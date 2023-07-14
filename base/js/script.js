@@ -1,91 +1,95 @@
 "use strict";
 
-// let number = 4.6;
+// Типы перменных
 
-// let num = 5;
-// const leftBorderWidth = 1;
+let number = 4.6;
+let number2 = 5;
+const leftBorderWidth = 1;
 
+console.log(number); 
+console.log(number2); 
+console.log(leftBorderWidth); 
 
-// const arrObj = {
-//     a: 'a',
-//     1: 'b'
-// }
+const arrObj = {
+    a: 'a',
+    1: 'b'
+}
 
-// arrObj.b = '1234';
-// arrObj['b'] = '1234';
+arrObj.b = '1234';
+arrObj['b'] = '1234';
 
-// console.log(arrObj.a);
-// console.log(arrObj[1]);
-// console.log(arrObj['b']);
-// console.log(arrObj.b);
-// console.log(arrObj['c']);
-// console.log(arrObj.c);
+console.log(arrObj.a);
+console.log(arrObj[1]);
+console.log(arrObj['b']);
+console.log(arrObj.b);
 
-// num = 10;
-// console.log(num); 
+number2 = 10;
+console.log(number2); 
 
-// const obj = {
-//     a: 50
-// };
+const obj = {
+    a: 50
+};
 
-// obj.a = 10;
+obj.a = 10;
 
-// console.log(obj);
+console.log(obj);
 
-// {
-//     let res =50;
-// }
+// Вывод на станицу и alert
 
-// console.log(res);
+alert('hello');
 
-// alert('hello');
+const res = confirm('Are you here?');
+console.log(res)
 
-// const res = confirm('Are you here?');
-// console.log(res)
+const ans = +prompt('Вам есть 18?', '18'); // динамическая типизация
+console.log(typeof(ans))
 
-// const ans = +prompt('Вам есть 18?', '18'); // динамическая типизация
-// console.log(typeof(ans))
+const ans2 = [];
 
-// const ans = [];
+ans2[0] = prompt('Name:', 'John');
+ans2[1] = prompt('Surname:', 'Watson');
+ans2[2] = +prompt('Age:', '40');
 
-// ans[0] = prompt('Name:', 'John');
-// ans[1] = prompt('Surname:', 'Watson');
-// ans[2] = +prompt('Age:', '40');
+document.write(ans2);
 
-// document.write(ans);
+const category = 'toys';
+console.log(`https://someurl.com/${category}/5`);
 
-// const category = 'toys';
+const user = 'Ivan';
+alert(`Hello, ${user}`)
 
-// console.log(`https://someurl.com/${category}/5`);
+// Логически операции
 
-// const user = 'Ivan';
+console.log('arr' + '- object');
+console.log(4 + +'5');
 
-// alert(`Hello, ${user}`)
+let incr = 10,
+    decr = 10;
 
-// console.log('arr' + '- object');
-// console.log(4 + +'5');
+incr++;
+decr--;
 
-// let incr = 10,
-//     decr = 10;
+console.log(incr);
+console.log(decr);
 
-// incr++;
-// decr--;
+++incr;
+--decr;
 
-// ++incr;
-// --decr;
+console.log(incr);
+console.log(decr);
 
-// console.log(++incr);
-// console.log(--decr);
+console.log(++incr);
+console.log(--decr);
 
-// console.log(5%2);
+console.log(5%2);
 
-// console.log(2*4 == 8);
-// console.log(2*4 === '8');
+console.log(2*4 == 8);
+console.log(2*4 === '8');
 
-// const isChecked = true,
-//       isClose = false;
+const isChecked = true,
+      isClose = false;
 
-// console.log(isChecked && isClose);
-// console.log(isChecked || isClose);
-// console.log(isChecked && !isClose);
+console.log(isChecked && isClose);
+console.log(isChecked || isClose);
+console.log(isChecked && !isClose);
 
