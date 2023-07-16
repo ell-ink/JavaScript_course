@@ -1,6 +1,6 @@
 "use strict";
 
-const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?', '');
+const numberOfFilms = +prompt("How many films have you watched recently?", "");
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -10,9 +10,10 @@ const personalMovieDB = {
     privat: false
 };
 
-const watchedMovie = prompt('Один из последних просмотренных фильмов?', '1+1'),
-      movieRating = prompt('На сколько оцените его?', '10');
+const watchedMovie = prompt("Name the last film you've watched.", "1+1"),
+      movieRating = prompt("Rate it, please.", "10");
 
 personalMovieDB.movies[watchedMovie] = movieRating;
 
 console.log(personalMovieDB);
+
