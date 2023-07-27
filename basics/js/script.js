@@ -212,7 +212,7 @@ const logger = function() { // function expression
 }; 
 logger();
 
-const arrowCalc = (a, b) => {return a + b}; // arrow function
+// const arrowCalc = (a, b) => {return a + b}; // arrow function
 
 const usdCurr = 20;
 const eurCurr = 30;
