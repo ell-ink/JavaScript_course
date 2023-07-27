@@ -252,3 +252,36 @@ test();
 function doNothing() {}
 console.log(doNothing() === undefined);
 
+// String and number Methods
+
+const methodStr = "teST";
+const methodArr = [1, 2, 3];
+
+console.log(methodStr.length);
+console.log(methodArr.length);
+
+console.log(methodStr[2]);
+
+console.log(methodStr.toUpperCase());
+console.log(methodStr.toLowerCase());
+
+let fruit = "Some fruit";
+
+console.log(fruit.indexOf("fruit"));
+console.log(fruit.indexOf("q"));
+
+const logg = "Hello world";
+
+console.log(logg.slice(6, 11));
+console.log(logg.slice(6));
+console.log(logg.slice(-5, -1));
+
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 5));
+
+const methodNum = 12.2;
+console.log(Math.round(methodNum));
+
+const methodTest = "12.2px";
+console.log(parseInt(methodTest));
+console.log(parseFloat(methodTest));
