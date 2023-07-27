@@ -10,7 +10,7 @@ const personalMovieDB = {
     privat: false
 };
 
-const watchedMovie = prompt("Name the last film you've watched.", "1+1"),
+const watchedMovie = prompt("Name the last film you have watched.", "1+1"),
       movieRating = prompt("Rate it, please.", "10");
 
 personalMovieDB.movies[watchedMovie] = movieRating;
