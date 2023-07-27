@@ -212,14 +212,43 @@ const logger = function() { // function expression
 }; 
 logger();
 
-const calc = (a, b) => {return a + b}; // arrow function
+const arrowCalc = (a, b) => {return a + b}; // arrow function
 
 const usdCurr = 20;
 const eurCurr = 30;
+const discount = 0.9;
 
 function convert(amount, curr) {
     console.log(curr * amount);
 }
 
+function convert2(amount, curr) {
+    return curr * amount;
+}
+
+function promotion(result) {
+    console.log(result * discount);
+    return function(){}
+}
+
+const resCurr = convert2(500, usdCurr);
+promotion(convert2(500, usdCurr));
+promotion(resCurr);
+
+
 convert(500, usdCurr);
 convert(500, eurCurr);
+
+function test() {
+    for (let i = 0; i < 5; i++){
+        console.log(i);
+        if (i == 3) return;
+    }
+    console.log("Done")
+}
+
+test();
+
+function doNothing() {}
+console.log(doNothing() === undefined);
+
