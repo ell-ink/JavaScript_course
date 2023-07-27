@@ -177,3 +177,49 @@ first: for(let i = 0; i < 3; i++){
         }
     }
 }
+
+// Funtcions
+
+let messageNum2 = 10; // global varible
+
+function showFirstMessage(text) {  // function declaration
+    console.log(`Your text: ${text}`);
+    let messageNum = 20; // local varible
+    messageNum2 = messageNum2 + messageNum;
+}
+
+showFirstMessage("Hello World!");
+console.log(messageNum2);
+
+console.log(calc(5, 10));
+console.log(calc(2, 7));
+console.log(calc(2000, 3));
+
+function calc(a, b) {
+    return(a + b);
+}
+
+function ret() {
+    let num = 13;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function() { // function expression
+    console.log("Hello!");
+}; 
+logger();
+
+const calc = (a, b) => {return a + b}; // arrow function
+
+const usdCurr = 20;
+const eurCurr = 30;
+
+function convert(amount, curr) {
+    console.log(curr * amount);
+}
+
+convert(500, usdCurr);
+convert(500, eurCurr);
