@@ -316,3 +316,48 @@ console.log(parseFloat(methodTest));
 
 const methodTrim = " Hello worl  " + "d";
 console.log(methodTrim.trim());
+
+// Objects Methods
+
+// const obj = new Object();
+
+const options = {
+        name: "test",
+        width: 1024,
+        height: 1024,
+        colors: {
+            border: "black",
+            bg: "red"
+        },
+        makeTest: function() {
+            console.log("Test");
+        }
+    };
+
+console.log(options.name);
+options.makeTest();
+
+const {border, bg} = options.colors;
+
+console.log({border});
+console.log({bg});
+
+console.log(Object.keys(options).length);
+
+delete options.name;
+
+console.log(options);
+
+for (let key in options) {
+    if (typeof(options[key]) === "object") {
+        for (let i in options[key]) {
+            console.log(`Attribute ${key} has value ${i}`);
+            console.log(`Attribute ${i} has value ${options[key][i]}`);   
+        }
+    } else {
+        console.log(`Attribute ${key} has value ${options[key]}`);
+    }
+}
+
+
+
