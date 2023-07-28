@@ -252,6 +252,34 @@ test();
 function doNothing() {}
 console.log(doNothing() === undefined);
 
+function first() { // callback function
+    setTimeout(function() {
+        console.log(1);
+    }, 500);
+}
+
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+function done() {
+    console.log("Lesson is complited")
+}
+
+function learnJs(lang, callback) {
+    console.log(`I learn ${lang}`);
+    callback();
+}
+
+learnJs("JavaScript", function() {
+    console.log("I finished this lesson");
+});
+
+learnJs("Java", done);
+
 // String and number Methods
 
 const methodStr = "teST";
@@ -285,3 +313,6 @@ console.log(Math.round(methodNum));
 const methodTest = "12.2px";
 console.log(parseInt(methodTest));
 console.log(parseFloat(methodTest));
+
+const methodTrim = " Hello worl  " + "d";
+console.log(methodTrim.trim());
