@@ -359,5 +359,38 @@ for (let key in options) {
     }
 }
 
+// Arrays Methods
 
+const arr = [2, 1, 6, 8, 3];
+
+arr.pop();
+arr.push(10);
+
+console.log(arr);
+console.log(arr.length);
+
+function compareNum(a, b) {
+    return a - b;
+}
+
+arr.sort(compareNum);
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for (let value of arr) {
+    console.log(value);
+} 
+
+arr.forEach(function(item, i, arr)  {
+    console.log(`${i}: ${item} is a value of array ${arr}`);
+});
+
+const arrStr = "toys, flowers, kittens";
+const products = arrStr.split(", ");
+products.sort();
+console.log(products);
+console.log(products.join(" "));
 
