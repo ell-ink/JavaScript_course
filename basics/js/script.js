@@ -509,4 +509,42 @@ console.log(john);
 console.log(john.armor);
 john.sayHello();
 
+// Dynamic typing
 
+// To String
+
+// console.log(typeof(String(4)));
+console.log(typeof(4 + ""));
+
+const num = 4;
+console.log("https://vk.com/category/" + num);
+
+const fontSize = 26 + "px";
+console.log(fontSize);
+
+// To Number
+
+// console.log(typeof(Number("4")));
+console.log(typeof(+"4px"));
+console.log(typeof(parseInt("15px", 10)));
+
+let yourAns = +prompt("Hello", "");
+console.log(yourAns);
+
+// To Boolean
+// Always false: 0, "", null, undefined, NaN
+
+let switcher = null;
+
+if (switcher) {
+    console.log("Working...");
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log("Working...");
+}
+
+// console.log(typeof(Boolean("4")));
+console.log(typeof(!!"4"));
