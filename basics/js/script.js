@@ -548,3 +548,60 @@ if (switcher) {
 
 // console.log(typeof(Boolean("4")));
 console.log(typeof(!!"4"));
+
+// Lexical Environment and Closure
+
+let myNum = 5; 
+
+function outputNum() {
+    let myNum = 4;
+    console.log(myNum);
+}
+
+myNum = 6;
+
+outputNum(); 
+console.log(myNum);
+
+function createCounter() {
+    let myCounter = 0;
+
+    const myFunction = function() {
+        myCounter = myCounter + 1;
+        return myCounter;
+    }
+    return myFunction;
+}
+
+
+const increment = createCounter();
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+
+console.log(c1, c2, c3);
+
+// Work with Elements
+
+const box = document.getElementById("box");
+console.log(box);
+
+const buttons = document.getElementsByTagName("button");
+console.log(buttons); // pseudo-array
+console.log(buttons[1]);
+
+const btn2 = document.getElementsByTagName("button")[2];
+console.log(btn2); 
+
+const circle = document.getElementsByClassName("circle");
+console.log(circle); 
+
+const hearts = document.querySelectorAll(".heart");
+console.log(hearts);
+
+hearts.forEach(item => {
+    console.log(item);
+});
+
+const oneHeart = document.querySelector(".heart");
+console.log(oneHeart);
