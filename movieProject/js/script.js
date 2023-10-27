@@ -14,36 +14,36 @@
 
 'use strict';
 
-const movieDB = {
-    movies: [
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость",
-        "Скотт Пилигрим против..."
+const flowersDB = {
+    flowers: [
+        "Лилия",
+        "Роза",
+        "Лаванда",
+        "Гербера",
+        "Пион"
     ]
 };
 
 const promoAdvImg = document.querySelectorAll(".promo__adv img"),
       poster = document.querySelector(".promo__bg"),
       promoGenre = poster.querySelector(".promo__genre"),
-      moviesList = document.querySelector(".promo__interactive-list");
+      fowersList = document.querySelector(".promo__interactive-list");
 
 
 promoAdvImg.forEach(item => {
     item.remove();
 });
 
-promoGenre.textContent = "драма";
+promoGenre.textContent = "цветы";
 
-poster.style.backgroundImage = "url('img/bg.jpg')";
+poster.style.backgroundImage = "url('img/bg.png')";
 
-moviesList.innerHTML = "";
+fowersList.innerHTML = "";
 
-movieDB.movies.sort();
+flowersDB.flowers.sort();
 
-movieDB.movies.forEach((movie, i) => {
-    moviesList.innerHTML += `
+flowersDB.flowers.forEach((movie, i) => {
+    fowersList.innerHTML += `
     <li class="promo__interactive-item">${i+1}. ${movie}
         <div class="delete"></div>
     </li>
