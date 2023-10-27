@@ -8,8 +8,8 @@
 
 В таком случае, когда мы попытаемся получить user.address.street, а пользователь окажется без адреса, мы получим ошибку:
 
-```let user = {}; // пользователь без свойства address / alert(user.address.street); // Ошибка!```
+```let user = {}; // пользователь без свойства address /br alert(user.address.street); // Ошибка!```
 
 **Опциональная цепочка ?. останавливает вычисление и возвращает undefined, если значение перед ?. равно undefined или null.**
 
-```let user = {}; // пользователь без адреса / alert( user?.address?.street ); // undefined (без ошибки)```
+```let user = {}; // пользователь без адреса /br alert( user?.address?.street ); // undefined (без ошибки)```
