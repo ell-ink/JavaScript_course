@@ -25,7 +25,7 @@ alert(5n / 2n); // 2
 В математических операциях мы не можем смешивать **bigint** и обычные числа:
 ```
 alert(1n + 2); // Error: Cannot mix BigInt and other types
-``
+```
 
 Мы должны явно их конвертировать: используя либо **BigInt()**, либо **Number()**, например:
 ```
@@ -37,7 +37,8 @@ alert(bigint + BigInt(number)); // 3
 
 // конвертируем `bigint` в number
 alert(Number(bigint) + number); // 3
-```
+---
+
 
 **К BigInt числам нельзя применить унарный оператор +** Мы должны использовать **Number()** для преобразования **bigint** к **number**.
 
