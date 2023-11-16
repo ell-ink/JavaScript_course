@@ -26,6 +26,7 @@ alert(5n / 2n); // 2
 ```
 alert(1n + 2); // Error: Cannot mix BigInt and other types
 ``
+
 Мы должны явно их конвертировать: используя либо **BigInt()**, либо **Number()**, например:
 ```
 let bigint = 1n;
